@@ -201,7 +201,7 @@ export default {
         createTime: '',
         updateTime: '',
         priority: 0,
-        allowComment: true
+        allowComment: false
       },
       rules: {
         title: [
