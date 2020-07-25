@@ -13,34 +13,3 @@
     <a alt="docker"><img src="https://img.shields.io/badge/docker-19.03.5--ce-ff69b4.svg"></a>
     <a alt="docker-compose"><img src="https://img.shields.io/badge/docker--compose-1.25.2-lightgrey.svg"></a>
 </p>
-
-* 基于`node` `java` `spring-boot` `vue` `nuxt` 开发的个人管理系统，目前已经实现「博客」、「权限管理」、「媒体库」、「代码段」、「定时任务」等功能
-* 支持`docker`部署
-* 功能精简但齐全，界面简洁却美观，满足个人日常使用要求
-* 项目会持续更新，如果有不完善的地方，欢迎指出
-
-> 演示站点：博客前端 [https://bihell.com](http://bihell.com) ， 管理前端 [https://bihell.com/admin](http://bihell.com/admin)
-
-> 演示账号：demo 密码：123456
-
-> QQ 群：787519476
-
-## 开发&部署
-
-[开发&部署文档](https://bigdata.bihell.com/project/dice.html)
-
-部署视屏：[西瓜视频](https://www.ixigua.com/i6822907847605486083/) [哔哩哔哩](https://www.bilibili.com/video/BV1EZ4y1s7DF/) [YouTube](https://www.youtube.com/watch?v=yppSdtAk3u0)
-
-## 部分界面
-
-![博客前端](https://raw.githubusercontent.com/bihell/blog-img/master/dice1.png)
-![](https://raw.githubusercontent.com/bihell/blog-img/master/dice4.png)
-![](https://raw.githubusercontent.com/bihell/blog-img/master/dice5.png)
-![](https://raw.githubusercontent.com/bihell/blog-img/master/dice7.png)
-![代码段](https://raw.githubusercontent.com/bihell/blog-img/master/snippet.png)
-![媒体库](https://raw.githubusercontent.com/bihell/blog-img/master/dice-media.png)
-![权限](https://raw.githubusercontent.com/bihell/blog-img/master/auth_api.png)
-![权限](https://raw.githubusercontent.com/bihell/blog-img/master/auth_menu.png)
-![权限](https://raw.githubusercontent.com/bihell/blog-img/master/auth_role.png)
-![权限](https://raw.githubusercontent.com/bihell/blog-img/master/auth_user.png)
-![tool_task](https://raw.githubusercontent.com/bihell/blog-img/master/tool_task.png)
