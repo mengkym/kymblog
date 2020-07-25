@@ -4,7 +4,7 @@ html {
 
 body {
   font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif;
-  color: #34495e;
+  color: #404040;
   -webkit-font-smoothing: antialiased;
   line-height: 1.6rem;
   letter-spacing: 0;
@@ -24,7 +24,7 @@ body {
 
 .markdown-body > ul:first-child,
 .markdown-body > ol:first-child {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 body > *:first-child {

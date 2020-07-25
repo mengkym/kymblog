@@ -3,12 +3,20 @@ import DiceUtil from './tools'
 // 时间格式化
 export function time(time, format) {
   const date = new Date(time)
-  return formatDate(date, format || 'yyyy-mm-dd HH:ss')
+  return formatDate(date, format || 'yyyy.mm.dd hh:mm:ss')
 }
 
 // 分类格式化
 export function formatCategory(category) {
   return category || DiceUtil.STATIC.DEFAULT_CATEGORY
+}
+
+export function ellipIndexContent(value) {
+  if (!value) return ''
+  if (value.length > 250) {
+    return value.slice(0, 250) + '...'
+  }
+  return value
 }
 
 function formatDate(date, fmt) {

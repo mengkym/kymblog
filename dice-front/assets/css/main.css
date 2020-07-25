@@ -139,7 +139,8 @@ img {
 }
 
 .text-primary {
-  color: #234e77;
+  /* color: #234e77; */
+  color: #404040;
 }
 
 .text-italic {

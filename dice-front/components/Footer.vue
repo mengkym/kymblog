@@ -1,9 +1,8 @@
 ﻿<template>
   <div class="footer">
     <p class="copyright">
-      © 2019 - 至今| J2M | 鲁ICP备<a href="http://beian.miit.gov.cn/">19033329</a>号 |
-	  Powered by
-      <a href="https://github.com/bihell/Dice" target="_blank">Dice</a>
+      Copyright © 2020 | J2M |
+      <a href="http://beian.miit.gov.cn/">鲁ICP备19033329号</a>
     </p>
     <div v-highlight v-html="options.blog_footer" class="markdown-body"></div>
   </div>
@@ -26,11 +25,16 @@ export default {
   max-width: 850px;
   border-top: 1px solid #e5e5e5;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
+  color: #c8c8c8;
 }
 
 a {
   color: #5764c6;
   text-decoration: none;
+  color: #c8c8c8;
+}
+a:hover {
+  color: #626675;
 }
 </style>

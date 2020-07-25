@@ -7,19 +7,19 @@
         {{ article.category | formatCategory }}
       </p>
       <p class="article-date">
-        <span class="icon-calendar"></span>
-        {{ article.createTime | time('yyyy-MM-dd') }}
-      </p>
-      <p class="article-date">
         <span class="icon-eye"></span> {{ article.hits }}
       </p>
       <p class="article-date">
-        <span class="icon-bubble2"> {{ article.commentCount }} </span>
+        <!-- <span class="icon-calendar"></span> -->
+        {{ article.createTime | time('yyyy.MM.dd hh:mm:ss') }}
       </p>
+      <!-- <p class="article-date">
+        <span class="icon-bubble2"> {{ article.commentCount }} </span>
+      </p> -->
     </div>
     <div v-highlight class="markdown-body" v-html="article.content"></div>
     <div class="article-tags">
-      <label class="label-tags">Tags:</label>
+      <label v-if="article.tags" class="label-tags">Tags:</label>
       <span
         v-for="tag in $util.stringToTags(article.tags)"
         :key="tag"
@@ -136,7 +136,7 @@ export default {
 }
 
 .article-title {
-  color: #34495e;
+  color: #404040;
   margin: 1.2em 0 0;
   font-size: 2em;
 }
@@ -145,15 +145,17 @@ export default {
 }
 
 .article-date {
-  color: #50596c;
+  color: #969696;
   display: inline-block;
   margin-left: 8px;
+  font-size: 0.9em;
 }
 
 .article-category {
-  color: #50596c;
+  color: #969696;
   display: inline-block;
   margin-right: 8px;
+  font-size: 0.9em;
 }
 
 .article-tags {
@@ -164,7 +166,7 @@ export default {
   margin-right: 6px;
   font-size: 16px;
   font-weight: 600;
-  color: #34495e;
+  color: #404040;
 }
 
 .article-tags .article-tag {

@@ -32,7 +32,7 @@
 <script>
 export default {
   head() {
-    return { title: `归档` }
+    return { title: `时间线` }
   },
   computed: {
     archives() {

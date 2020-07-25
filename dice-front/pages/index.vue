@@ -10,15 +10,14 @@
         <span class="icon-folder"></span>
         {{ article.category | formatCategory }}
       </p>
-      <p class="article-date text-italic">
-        <span class="icon-calendar"></span>
-        {{ article.createTime | time('yyyy-MM-dd') }}
-      </p>
       <p class="article-date">
         <span class="icon-eye"></span> {{ article.hits }}
       </p>
-      <p class="article-date">
+      <!-- <p class="article-date">
         <span class="icon-bubble2"> {{ article.commentCount }} </span>
+      </p> -->
+      <p class="article-date">
+        {{ article.createTime | time('yyyy-MM-dd hh:mm') }}
       </p>
       <div class="article-tags">
         <label
@@ -32,12 +31,12 @@
       <div
         v-highlight
         class="article-summary markdown-body"
-        v-html="article.content"
+        v-html="$options.filters.ellipIndexContent(article.content)"
       ></div>
       <nuxt-link
         class="article-more text-primary"
         :to="{ path: '/article/' + article.id }"
-        >Read more
+        >阅读全文
       </nuxt-link>
     </div>
     <div class="front-page">
@@ -62,8 +61,13 @@ export default {
   transition (to, from) {
     return 'move'
   },
+  data(){
+    return{
+      currentYear:new Date().getFullYear()
+    }
+  },
   head () {
-    return { title: `Blog` }
+    return { title: `beekaboo` }
   },
   computed: {
     articles () {
@@ -90,6 +94,8 @@ export default {
   text-align: center;
   border-radius: 4px;
   opacity: 0.9;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
 }
 </style>
 
@@ -100,7 +106,7 @@ export default {
 }
 
 .article-item:first-child {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .article-head {
@@ -110,7 +116,7 @@ export default {
 }
 
 .article-head > a {
-  color: #34495e;
+  color: #404040;
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -124,7 +130,7 @@ export default {
   bottom: 0;
   left: 51%;
   right: 51%;
-  background: #5764c6;
+  background: #04ceff;
   transition-duration: 0.2s;
 }
 
@@ -135,7 +141,7 @@ export default {
 
 .article-item .article-date {
   display: inline-block;
-  color: #7f8c8d;
+  color: #969696;
   margin: 5px 5px;
   font-size: 0.9em;
 }
@@ -180,18 +186,22 @@ export default {
 }
 
 .article-item .article-summary {
-  margin-top: 1.5em;
+  margin-top: 1em;
+  font-size: 0.9rem;
+  color: #999;
 }
 
 .article-item .article-more {
+  color: #c0c2c8;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 12px;
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s;
 }
 
 .article-item .article-more:hover {
+  color: #626675;
   transform: translateX(10px);
 }
 

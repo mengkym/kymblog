@@ -2,16 +2,16 @@
   <div v-fix class="header">
     <div class="header-container">
       <nuxt-link class="logo" :to="'/'">
-        <img src="/logo.png" width="26px" height="26px" />
         <span class="text-primary" style="margin-left: 10px">{{
-          options.blog_name || 'Dice'
+          options.blog_name || 'beekaboo'
         }}</span>
+        <img src="/logo.png" width="26px" height="26px" />
       </nuxt-link>
       <ul class="tab link-list">
         <li v-for="(list, index) in links" :key="index" class="tab-item">
           <nuxt-link :to="{ path: list.path }" exact>{{ list.name }}</nuxt-link>
         </li>
-        <li class="tab-item">
+        <!-- <li class="tab-item">
           <a href="/feed.xml">RSS订阅</a>
         </li>
         <li class="tab-item">
@@ -19,7 +19,7 @@
         </li>
         <li class="tab-item">
           <a href="https://space.bilibili.com/88900889">B站Vlog</a>
-        </li>
+        </li> -->
       </ul>
       <div class="header-menu">
         <div class="header-menu-icon" @click="toggle">
@@ -48,7 +48,8 @@ const staticMenu = [
     { path: '/', name: '首页' },
     { path: '/category', name: '分类' },
     { path: '/tag', name: '标签' },
-    { path: '/archive', name: '归档' }
+    { path: '/archive', name: '时间线' },
+    { path: '/about', name: '关于' }
 ]
 
 export default {
@@ -153,7 +154,8 @@ a {
   float: left;
   margin: 5px 0;
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.8em;
+  font-weight: bold;
 }
 
 .header-container .tab {
@@ -174,13 +176,18 @@ a {
   display: block;
   margin: 0;
   padding: 0.4rem 0.2rem 0.3rem 0.2rem;
-  color: #50596c;
+  color: #c0c2c8;
   text-decoration: none;
 }
 
+.header-container .tab .tab-item a:hover {
+  /* color: #c0c2c8; */
+  color: #626675;
+}
+
 .header-container .tab .tab-item a.active {
-  border-bottom-color: #234e77;
-  color: #234e77;
+  border-bottom-color: #404040;
+  color: #404040;
 }
 
 @media screen and (max-width: 600px) {
