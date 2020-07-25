@@ -1,0 +1,5 @@
+FROM maven:3.6.3-jdk-11-openj9
+
+LABEL MAINTAINER="tpxcer@outlook.com"
+
+ENV LANG C.UTF-8
