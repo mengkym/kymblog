@@ -8,6 +8,7 @@
     <div>
       <p class="myname">靳兆孟</p>
       <p class="mytitle">前端开发者</p>
+      <p>致力于将飞机稿落地</p>
     </div>
   </div>
 </template>
