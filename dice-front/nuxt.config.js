@@ -9,7 +9,7 @@ export default {
    */
   head: {
     title: defaultConfig.meta_title,
-    titleTemplate: '%s - BIHell',
+    titleTemplate: '%s - beekaboo',
     meta: [
       { charset: 'utf-8' },
       { 'http-equiv': 'cleartype', content: 'on' },

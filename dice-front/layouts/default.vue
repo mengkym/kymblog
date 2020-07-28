@@ -24,10 +24,11 @@ export default {
     DiceScrollTop
   },
   head() {
+    console.log(this.options)
     return {
       title: `${this.options.meta_title}` || defaultConfig.meta_title,
       titleTemplate:
-        '%s - ' + this.options.meta_title || defaultConfig.meta_title,
+        '%s - ' + (this.options.meta_title || defaultConfig.meta_title),
       meta: [
         {
           hid: 'description',

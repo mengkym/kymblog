@@ -1,8 +1,8 @@
 export default {
-  meta_title: 'BIHell',
-  meta_description: '专注于大数据处理技术',
-  meta_keywords: 'Hadoop, Java, Hive, Spring-Boot',
-  meta_author: 'tpxcer@outlook.com',
+  meta_title: 'beekaboo',
+  meta_description: 'J2M的个人博客网站',
+  meta_keywords: 'beekaboo,靳兆孟, MagicaVoxel, Blog, Vue',
+  meta_author: 'JZM1071580511@outlook.com',
   google_site_verification: '',
   baidu_site_verification: ''
 }

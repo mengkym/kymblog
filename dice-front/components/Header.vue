@@ -45,7 +45,7 @@
 import _ from 'underscore'
 
 const staticMenu = [
-    { path: '/', name: '首页' },
+    { path: '/', name: '博客' },
     { path: '/category', name: '分类' },
     { path: '/tag', name: '标签' },
     { path: '/archive', name: '时间线' },

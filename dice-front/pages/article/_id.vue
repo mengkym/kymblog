@@ -138,7 +138,7 @@ export default {
 .article-title {
   color: #404040;
   margin: 1.2em 0 0;
-  font-size: 2em;
+  font-size: 1.3em;
 }
 
 .article-info {

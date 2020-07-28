@@ -42,12 +42,12 @@
     <div class="front-page">
       <div v-if="currentPage > 1" class="pre text-primary">
         <nuxt-link :to="{ path: '', query: { page: currentPage - 1 } }"
-          >← Pre
+          >← 上一页
         </nuxt-link>
       </div>
       <div v-if="currentPage < totalPage" class="next text-primary">
         <nuxt-link :to="{ path: '', query: { page: currentPage + 1 } }"
-          >Next →
+          >下一页 →
         </nuxt-link>
       </div>
     </div>
@@ -67,7 +67,7 @@ export default {
     }
   },
   head () {
-    return { title: `beekaboo` }
+    return { title: `博客` }
   },
   computed: {
     articles () {
@@ -101,7 +101,7 @@ export default {
 
 <style scoped>
 .article-item {
-  padding: 2em 0 2em;
+  padding: 1.2em 0 1.2em;
   border-bottom: 1px solid #ddd;
 }
 
@@ -111,7 +111,7 @@ export default {
 
 .article-head {
   line-height: 1.2;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   margin: 0;
 }
 
@@ -212,8 +212,12 @@ export default {
 
 .front-page a {
   font-weight: bold;
-  color: #5764c6;
+  color: #c0c2c8;
   text-decoration: none;
+}
+
+.front-page a:hover {
+  color: #626675;
 }
 
 .front-page .pre {
