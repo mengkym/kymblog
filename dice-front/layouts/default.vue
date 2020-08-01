@@ -24,7 +24,6 @@ export default {
     DiceScrollTop
   },
   head() {
-    console.log(this.options)
     return {
       title: `${this.options.meta_title}` || defaultConfig.meta_title,
       titleTemplate:

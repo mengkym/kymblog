@@ -103,6 +103,7 @@ export default {
 .article-item {
   padding: 1.2em 0 1.2em;
   border-bottom: 1px solid #ddd;
+  overflow: hidden;
 }
 
 .article-item:first-child {
@@ -198,11 +199,12 @@ export default {
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s;
+  float: right;
 }
 
 .article-item .article-more:hover {
   color: #626675;
-  transform: translateX(10px);
+  transform: translateX(-10px);
 }
 
 .front-page {

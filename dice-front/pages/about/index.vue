@@ -2,13 +2,12 @@
   <div class="aboutme">
     <div class="profile">
       <transition name="fade">
-        <img src="/logo.png" width="120px" height="120px" />
+        <img v-if="profileflag" src="/logo.png" width="120px" height="120px" />
       </transition>
     </div>
     <div>
       <p class="myname">靳兆孟</p>
-      <p class="mytitle">前端开发者</p>
-      <p>致力于将飞机稿落地</p>
+      <p class="mytitle">&nbsp;一个立志于将飞机稿落地的前端开发者&nbsp;</p>
     </div>
   </div>
 </template>
@@ -17,6 +16,14 @@
 export default {
   head() {
     return { title: `关于` }
+  },
+  data() {
+    return {
+      profileflag: false
+    }
+  },
+  mounted() {
+    this.profileflag = true
   },
   computed: {
     archives() {
@@ -41,19 +48,22 @@ export default {
   animation: scale;
 }
 
-.fade-enter {
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter,
+.slide-fade-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(10px);
   opacity: 0;
-  transform: translateY(50px);
 }
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(100px);
-}
-.fade-enter-active {
-  transition: all 0.5s;
-}
-.fade-leave-active {
-  transition: all 0.8s cubic-bezier(, 0.5, 0.8, 1);
+
+.profile img {
+  border-radius: 50%;
+  background-color: #e6e6fa;
 }
 
 .myname {
@@ -68,5 +78,46 @@ export default {
   font-size: 1em;
   line-height: 1em;
   margin: 0;
+}
+
+blockquote {
+  border: none;
+  font: 1.2em/1.6em Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: -30px;
+  quotes: '\201C''\201D''\2018''\2019';
+}
+
+.mytitle:before {
+  content: open-quote;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.mytitle:after {
+  content: close-quote;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fade-enter-active {
+  animation: circle 0.5s;
+}
+
+.fade-leave-active {
+  animation: circle 0.5s reverse;
 }
 </style>
