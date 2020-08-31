@@ -1,6 +1,11 @@
 <template>
   <div>
     <div v-for="article in articles" :key="article.id" class="article-item">
+      <div class="touch-mask">
+        <nuxt-link :to="{ path: '/article/' + article.id }" class="touch-link"
+          >{{ article.title }}
+        </nuxt-link>
+      </div>
       <h2 class="article-head text-bold">
         <nuxt-link :to="{ path: '/article/' + article.id }"
           >{{ article.title }}
@@ -104,6 +109,7 @@ export default {
   padding: 1.2em 0 1.2em;
   border-bottom: 1px solid #ddd;
   overflow: hidden;
+  position: relative;
 }
 
 .article-item:first-child {
@@ -114,6 +120,23 @@ export default {
   line-height: 1.2;
   font-size: 1.2rem;
   margin: 0;
+}
+
+.touch-mask {
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  /* background-color: #999; */
+}
+
+.touch-link {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .article-head > a {

@@ -59,7 +59,7 @@ export default {
   border-radius: 20px;
   transform: translate(80px, 0);
   transition: all 0.3s ease;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 3px 3px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.2);
 }
 
 .fa-arrow-up {
