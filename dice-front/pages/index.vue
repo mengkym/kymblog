@@ -2,8 +2,7 @@
   <div>
     <div v-for="article in articles" :key="article.id" class="article-item">
       <div class="touch-mask">
-        <nuxt-link :to="{ path: '/article/' + article.id }" class="touch-link"
-          >{{ article.title }}
+        <nuxt-link :to="{ path: '/article/' + article.id }" class="touch-link">
         </nuxt-link>
       </div>
       <h2 class="article-head text-bold">
@@ -123,20 +122,7 @@ export default {
 }
 
 .touch-mask {
-  display: inline-block;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  /* background-color: #999; */
-}
-
-.touch-link {
-  display: block;
-  height: 100%;
-  width: 100%;
+  display: none;
 }
 
 .article-head > a {
@@ -261,5 +247,27 @@ export default {
 
 .front-page .next:hover {
   transform: translateX(10px);
+}
+
+@media screen and (max-width: 600px) {
+  .touch-mask {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  .touch-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  .article-item .article-more {
+    display: none;
+  }
 }
 </style>
