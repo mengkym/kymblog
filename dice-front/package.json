@@ -21,7 +21,7 @@
     "highlight.js": "^9.16.2",
     "nuxt": "2.12.2",
     "tocbot": "^4.10.0",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.1",
