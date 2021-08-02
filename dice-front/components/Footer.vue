@@ -1,7 +1,7 @@
 ﻿<template>
   <div class="footer">
     <p class="copyright">
-      Copyright © 2020 | J2M |
+      Copyright © 2021 | J2M |
       <a href="http://beian.miit.gov.cn/">鲁ICP备19033329号</a>
     </p>
     <div v-highlight v-html="options.blog_footer" class="markdown-body"></div>

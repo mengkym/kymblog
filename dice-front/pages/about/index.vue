@@ -7,7 +7,7 @@
     </div>
     <div>
       <p class="myname">靳兆孟</p>
-      <p class="mytitle">&nbsp;一个立志于将飞机稿落地的前端开发者&nbsp;</p>
+      <p class="mytitle">&nbsp;前端开发者 热爱垃圾食品 狮子座&nbsp;</p>
     </div>
   </div>
 </template>
