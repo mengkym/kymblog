@@ -2,7 +2,12 @@
   <div class="aboutme">
     <div class="profile">
       <transition name="fade">
-        <img v-if="profileflag" src="/logo.png" width="120px" height="120px" />
+        <img
+          v-if="profileflag"
+          src="/profile.jpg"
+          width="120px"
+          height="120px"
+        />
       </transition>
     </div>
     <div>
