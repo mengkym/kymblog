@@ -4,7 +4,7 @@
       <transition name="fade">
         <img
           v-if="profileflag"
-          src="/profile.jpg"
+          src="/profile.webp"
           width="120px"
           height="120px"
         />
